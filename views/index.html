@@ -1,0 +1,58 @@
+<html lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<title> Waves </title>
+			
+		<link rel="stylesheet" type="text/css" href="/lib/semantic/dist/semantic.min.css">	
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="ui wide sidebar inverted vertical menu">
+			<div class="item"><b><center> Your Waves Playlist </center></b></div>
+		</div>
+		<div class="pusher">
+			<nav class="ui menu inverted navbar page grid" id="topNav">
+				<a class="brand item" id="nav-open-side"> WAVES &nbsp; <i class="music icon"></i> </a>
+				<div class="right menu">
+					
+					<div class="item">
+						<button class="ui blue button"><a href="/login"> Login </a></button>
+					</div>
+				</div>
+			</nav>
+			<div class="ui huge message page">
+				<h1 class="ui header">WAVES</h1>
+				<h3> Search any song title and get results instantly </h3>
+				<form id="search">
+					<div class="ui massive icon input">
+						<input id="search-input" type="text" placeholder="Search...">
+						<i class="search icon"></i>
+					</div>
+				</form>
+			</div>
+			<div class="ui grid">
+				<div class="three column row">
+					<div class="column">
+						<i class="youtube title icon"></i>
+						<div class="ui youtube loader"></div>
+						<ul id="youtube-results"></ul>
+					</div>
+					<div class="column">
+						<i class="spotify title icon"></i>
+						<div class="ui spotify loader"></div>
+						<ul id="spotify-results"></ul>
+					</div>
+					<div class="column">
+						<i class="soundcloud title icon"></i>
+						<div class="ui soundcloud loader"></div>
+						<ul id="soundcloud-results"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="/lib/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/lib/semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>

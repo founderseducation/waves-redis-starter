@@ -1,0 +1,74 @@
+body {
+	margin-top:0 !important;
+	padding: 0 !important;
+}
+
+h1 {
+	font-size: 72px !important;
+	padding-top: 30px !important;
+	letter-spacing: 10px;
+}
+
+a, a:hover {
+	color: white;
+}
+
+#topNav {
+	margin: 0 !important; 
+	padding: 0 !important;
+	border-radius: 0 !important;
+}
+
+.huge.message.page {
+	margin-top: 0;
+	background-image: linear-gradient(to left, rgb(36, 198, 220), rgb(81, 74, 157));
+	min-height: 400px !important;
+	border-radius: 0 !important;
+	text-align: center;
+}
+
+#search {
+	margin-top: 2em;
+}
+
+ul {
+	padding: 0 !important;
+}
+
+.three.column.row > .column {
+	text-align: center;
+}
+
+.column:first-child {
+	padding-left: 1rem !important;
+}
+
+.column:last-child {
+	padding-right: 1rem !important;
+}
+
+.title.icon {
+	font-size: 5em;
+	margin-top: 0.5em;
+}
+
+.youtube.icon {
+	color: red;
+}
+
+.spotify.icon {
+	color: limegreen;
+}
+
+.soundcloud.icon {
+	color: orangered;
+}
+
+.ui.loader {
+	position: static;
+	margin: 3em auto;
+}
+
+.ui.icon.button {
+	margin-left: -25px;
+}

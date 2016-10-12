@@ -1,0 +1,90 @@
+<html lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<title> Waves </title>
+			
+		<link rel="stylesheet" type="text/css" href="/lib/semantic/dist/semantic.min.css">	
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="pusher">
+			<nav class="ui menu inverted navbar page grid" id="topNav">
+				<a class="brand item" id="nav-open-side"> WAVES &nbsp; <i class="music icon"></i> </a>
+				<div class="right menu">
+					
+					<div class="item">
+						<button class="ui blue button"><a href="/"> Home </a></button>
+					</div>
+				</div>
+			</nav>
+            <div class="ui container">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h2 class="ui dividing header">Login or Register</h2>
+                <p> 
+                    If you already have an account, please enter your credentials. If you are new to Waves, please enter a 
+                    unique username and a secure password.
+                </p>
+                <div class="ui container">
+                    <div class="ui top attached tabular menu container">
+                        <a class="item active" data-tab="first">Login</a>
+                        <a class="item" data-tab="second">Register</a>
+                    </div>
+                    <div class="ui bottom attached tab segment active" data-tab="first">
+                        <form action="/login" method="post">
+                            <div class="ui grid">
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="ui left icon big input">
+                                            <input type="text" placeholder="Enter username" id="username">
+                                            <i class="users icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="ui left icon big input">
+                                            <input type="password" placeholder="Enter password" id="password">
+                                            <i class="asterisk icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui hidden divider"></div>
+                            <button type="submit" class="ui blue button">Login</button>
+                        </form>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="second">
+                        <form action="/signup" method="post">
+                            <div class="ui grid">
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="ui left icon big input">
+                                            <input type="text" placeholder="Enter username" id="username">
+                                            <i class="users icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="ui left icon big input">
+                                            <input type="password" placeholder="Enter password" id="password">
+                                            <i class="asterisk icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui hidden divider"></div>
+                            <button type="submit" class="ui blue button">Signup</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="/lib/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/lib/semantic/dist/semantic.min.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
