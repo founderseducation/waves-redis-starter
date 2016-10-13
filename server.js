@@ -1,8 +1,5 @@
 // Include our node modules
-var express = require("express"); 
-var http = require("http");
-var cookieParser = require("cookie-parser");
-var bodyParser = require("body-parser");
+// TODO: define our node modules
 
 // Our node app is an instance of express
 var app = express(); 
@@ -24,12 +21,12 @@ app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
 // Require the necessary routes 
-var index = require("./routes/index");
-var login = require("./routes/login");
+// TODO: define the necessary routes
+var index = null;
+var login = null;
 
 // Use the routes to render views
-app.use("/" , index);
-app.use("/login", login);
+// TODO: let our app use the routes on certain paths
 
 // Start the server and listen on the designated port
 var httpServer = http.createServer(app).listen(port);

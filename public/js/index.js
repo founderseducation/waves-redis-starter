@@ -1,40 +1,22 @@
 
 // Implement all API calls on submit from the main search bar
-$("#search").on("submit", function(e) {
+// TODO: redefine the search event
+$("#search").on(" xxxxxx ", function(e) {
     e.preventDefault();         // prevents propogation of events from affecting this call
-    var query = $("#search-input").val();   // grab the string from the search bar
+
+    // TODO: use jquery identifiers to get the value of the search string
+    var query = null;           // grab the string from the search bar
 
     emptyCurrentResults();      // function to remove current divs of their results
     
     // Begin by executing first call to spotify server api
     $.ajax({
-        url: "/spotify",
-        method: "POST",
-        data: {
-            q: query
-        },
-        success: function(data) {
-            $(".ui.spotify.loader").removeClass("active");      // stop showing the loader for Spotify
-            var loopLength = (data.tracks.items.length > 7) ? 7 : data.tracks.items.length;
-            for (var i = 0; i < loopLength; i++) {
-                populateSpotifySection(data.tracks.items[i]);
-            }
-        }
+        url: "/spotify"
     });
 
     // Next, call youtube server api
     $.ajax({
-        url: "/youtube",
-        method: "POST",
-        data: {
-            q: query
-        },        
-        success: function(data) {
-            $(".ui.youtube.loader").removeClass("active");      // stop showing the loader for YouTube
-            for (var i = 0; i < data.items.length; i++) {
-                populateYouTubeSection(data.items[i]);
-            }
-        }
+        url: "/youtube"
     });
 
     // Now begin the call to client-side soundcloud api
@@ -42,13 +24,10 @@ $("#search").on("submit", function(e) {
         client_id: '4a57a1db8f696c78163c8039d82f447c'
     });
     SC.get('/tracks', {
-        q: query
+        // TODO: send our data to the SoundCloud request
     }).then(function(tracks) {
         $(".ui.soundcloud.loader").removeClass("active");
-        var loopLength = (tracks.length > 5) ? 5 : tracks.length;
-        for (var i = 0; i < loopLength; i++) {
-            populateSoundCloudSection(tracks[i]);
-        }
+        // TODO: handle the return of SoundCloud results
     });
 });
 
