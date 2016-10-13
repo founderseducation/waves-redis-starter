@@ -1,5 +1,6 @@
 // Include our node modules
 var express = require("express");
+
 // TODO: define the remainder of the node modules to be used in this file
 
 
@@ -10,9 +11,7 @@ var keyStorage = require("../config/keyStorage.js");
 var redisClient = null;                 
 
 // If an error occurs, print it to the console
-redisClient.on('error', function (err) {
-    console.log("Youtube Redis Cache Error: " + err);
-});
+// TODO: print errors to console
 
 // Create a connection to our YouTube API, provide the client-key
 // TODO: configure the YouTube API
